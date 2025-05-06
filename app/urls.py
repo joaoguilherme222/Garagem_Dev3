@@ -11,6 +11,7 @@ from core.views import UserViewSet
 from core.views.acessorio import AcessorioViewSet
 from core.views.cor import CorViewSet
 from core.views.modelo import ModeloViewSet
+from core.views import VeiculoViewSet
 
 router = DefaultRouter()
 
@@ -18,6 +19,7 @@ router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r"acessorios", AcessorioViewSet)
 router.register(r"cores", CorViewSet)
 router.register(r"modelos", ModeloViewSet)
+router.register(r"veiculos", VeiculoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
